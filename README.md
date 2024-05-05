@@ -11,9 +11,10 @@ Build GDExtension with CMake.
 3. Let Visual Studio configure the project.
 4. Select the Startup Item `TemplateName.dll`.
 5. Build the project.
-6. Copy the contents of the `demo/bin` folder to your project.
+6. Copy the contents of the `demo/bin` folder into your project.
 
-The extension will be built against the Godot 4.2 release and it should work just fine with Godot 4.3 but not 4.1. Edit `CMakeLists.txt` if you need a different version.
+The extension will be built against the Godot 4.2 release and it should work just fine with Godot 4.3 but not 4.1.  
+Edit `CMakeLists.txt` if you need a different version. Replace `GIT_TAG godot-4.2-stable` with the desired version there.
 
 ## HOW TO DEBUG
 
@@ -21,14 +22,20 @@ You can debug GDExtension with the released version of Godot or with the custom 
 
 ### DEBUG WITH THE RELEASED VERSION OF GODOT
 
-1. Edit `.vs/launch.vs.json` file to point to a release installation of Godot.
-2. Open the project folder in Visual Studio.
-3. Select configuration `x64 Debug`.
-4. Let Visual Studio configure the project.
-5. Select the Startup Item `TemplateName (Godot 4.2)`.
-6. Build the project.
+1. Edit `.vs/launch.vs.json` file to point to a release installation of Godot.  
+   Replace `C:\\Development\\Godot\\Godot_v4.2.1-stable_win64_console.exe` with your path.
+3. Open the project folder in Visual Studio.
+4. Select configuration `x64 Debug`.
+5. Let Visual Studio configure the project.
+6. Select the Startup Item `TemplateName (Godot 4.2)`.
+7. Start Debugging (F5).  
+   If everything worked correctly, the editor should automatically open the demo project.
+9. Play the Project in Godot (F5).
 
-If everything worked correctly, the editor should automatically open the demo project.
+Godot starts a separate process when running a game from the editor so you need to attach to that process from Visual Studio.
+
+8. Return to Visual Studio and select `Debug > Attach to Process (Ctrl + Alt + P)`.
+9. Select the process `Godot_v4.2.1-stable_win64.exe`, the first one, and press the Attach button.
 
 ### DEBUG WITH THE CUSTOM BUILD
 
