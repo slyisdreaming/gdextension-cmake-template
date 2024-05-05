@@ -4,7 +4,7 @@ Build GDExtension with CMake.
 > Thanks to [vorlac](https://github.com/vorlac) for the detailed guide how to build GDExtensions with CMake.  
 > Check his work here: https://github.com/vorlac/godot-gdextension-demo-cmake
 
-# HOW TO BUILD
+## HOW TO BUILD
 
 1. Open the project folder in Visual Studio.
 2. Select configuration `x64 Release`.
@@ -15,12 +15,11 @@ Build GDExtension with CMake.
 
 The extension will be built against the Godot 4.2 release and it should work just fine with Godot 4.3 but not 4.1. Edit `CMakeLists.txt` if you need a different version.
 
-# HOW TO DEBUG
+## HOW TO DEBUG
 
 You can debug GDExtension with the released version of Godot or with the custom build. The latter helps trace bugs directly into the engine.
 
-
-## DEBUG WITH THE RELEASED VERSION OF GODOT
+### DEBUG WITH THE RELEASED VERSION OF GODOT
 
 1. Edit `.vs/launch.vs.json` file to point to a release installation of Godot.
 2. Open the project folder in Visual Studio.
@@ -31,7 +30,7 @@ You can debug GDExtension with the released version of Godot or with the custom 
 
 If everything worked correctly, the editor should automatically open the demo project.
 
-## DEBUG WITH THE CUSTOM BUILD
+### DEBUG WITH THE CUSTOM BUILD
 
 1. Open the project folder in Visual Studio.
 2. Select configuration `x64 Debug`.
