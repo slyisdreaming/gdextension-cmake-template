@@ -1,5 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
+out/
+.vs/*
+!.vs/launch.vs.json
+enc_temp_folder/
 
 # Godot-specific ignores
 .import/
@@ -13,3 +17,7 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+*.dll
+*.ilk
+*.pdb

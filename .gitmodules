@@ -1,0 +1,5 @@
+[submodule "godot"]
+	shallow = true
+	path = godot
+	url = https://github.com/godotengine/godot
+	branch = 4.2

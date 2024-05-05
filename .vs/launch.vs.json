@@ -1,0 +1,28 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "dll",
+      "exe": "C:\\Development\\Godot\\Godot_v4.2.1-stable_win64_console.exe",
+      "args": [
+        "--editor",
+        "--path",
+        "${workspaceRoot}\\demo"
+      ],
+      "project": "CMakeLists.txt",
+      "name": "1. TemplateName (Godot 4.2)"
+    },
+    {
+      "type": "dll",
+      "exe": "${workspaceRoot}\\godot\\bin\\godot.windows.editor.x86_64.exe",
+      "args": [
+        "--editor",
+        "--path",
+        "${workspaceRoot}\\demo"
+      ],
+      "project": "CMakeLists.txt",
+      "name": "2. TemplateName (Custom 4.2)"
+    }
+  ]
+}
