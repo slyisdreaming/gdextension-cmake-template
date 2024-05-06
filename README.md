@@ -20,34 +20,46 @@ Open `CMakeLists.txt` and replace `godot-4.2-stable` to build against a differen
 
 You can debug GDExtension with the released version of Godot or with the custom build. The latter helps trace bugs directly into the engine.
 
+The routine is also a bit different whether you want to debug the tools code or the game code. Godot runs the game code in a separate process so you need to attach the debugger to that process.
+
 ### DEBUG WITH THE RELEASED VERSION OF GODOT
 
 1. Open `.vs/launch.vs.json` file and replace `C:\\Development\\Godot\\Godot_v4.2.1-stable_win64_console.exe` with your path.
-3. Open the project folder in Visual Studio.
-4. Select configuration `x64 Debug`.
-5. Let Visual Studio configure the project.
-6. Select the Startup Item `TemplateName (Godot 4.2)`.
-7. Start Debugging (F5).  
-   If everything worked correctly, the editor should automatically open the demo project.
-9. Play the Project in Godot (F5).
+2. Open the project folder in Visual Studio.
+3. Select the configuration `x64 Debug`.
+4. Let Visual Studio configure the project.
+5. Select the Startup Item `TemplateName (Godot 4.2)`.
 
-Godot starts a separate process when running a game in the editor so you need to attach to that process from Visual Studio.
+**TO DEBUG TOOLS**
 
+6. Start Debugging (F5).
+
+If everything worked correctly, the editor should automatically open the demo project.
+
+**TO DEBUG GAME**
+
+6. Start Without Debugging (Ctrl+F5). The editor should open the demo project.
+7. Play the Project in Godot (F5).
 8. Return to Visual Studio and select `Debug > Attach to Process (Ctrl + Alt + P)`.
 9. Select the process `Godot_v4.2.1-stable_win64.exe`, the first one, and press the Attach button.
 
 ### DEBUG WITH THE CUSTOM BUILD
 
 1. Open the project folder in Visual Studio.
-2. Select configuration `x64 Debug`.
+2. Select the configuration `x64 Debug`.
 3. Let Visual Studio configure the project.
 4. Select the Startup Item `TemplateName (Custom 4.2)`.
-5. Start Debugging (F5).  
-   If everything worked correctly, the editor should automatically open the demo project.
+
+**TO DEBUG TOOLS**
+
+5. Start Debugging (F5).
+
+If everything worked correctly, the editor should automatically open the demo project.
+
+**TO DEBUG GAME**
+
+5. Start Without Debugging (Ctrl+F5). The editor should open the demo project.
 6. Play the Project in Godot (F5).
-
-Godot starts a separate process when running a game from the editor so you need to attach to that process from Visual Studio.
-
 7. Return to Visual Studio and select `Debug > Attach to Process (Ctrl + Alt + P)`.
 8. Select the process `Godot_v4.2.1-stable_win64.exe`, the first one, and press the Attach button.
 
