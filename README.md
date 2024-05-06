@@ -11,7 +11,7 @@ Build GDExtension with CMake.
 3. Let Visual Studio configure the project.
 4. Select the Startup Item `TemplateName.dll`.
 5. Build the project.
-6. Copy the contents of the `demo/bin` folder into your project.
+6. Copy the contents of the `demo/addons` folder into your project.
 
 The extension will be built against the Godot 4.2 release and it should work just fine with Godot 4.3 but not 4.1.  
 Open `CMakeLists.txt` and replace `godot-4.2-stable` to build against a different version of Godot.
